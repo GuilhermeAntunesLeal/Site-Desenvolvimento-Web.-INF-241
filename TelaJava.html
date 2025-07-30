@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: #0e0e0e;
+      overflow: hidden;
+      height: 100vh;
+      color: white;
+      font-family: sans-serif;
+    }
+
+    .fundo-inicial {
+      background-image: url('Imagem/FundoJava.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .botao-voltar {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #ffffff22;
+      color: white;
+      border: 1px solid white;
+      border-radius: 8px;
+      text-decoration: none;
+      backdrop-filter: blur(5px);
+      z-index: 999;
+    }
+
+    .botao-voltar:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .quadro {
+      width: 600px;
+      margin: 50px auto;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 12px;
+      backdrop-filter: blur(5px);
+    }
+
+    .topico {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .topico:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .titulo {
+      padding: 12px;
+      font-weight: bold;
+    }
+
+    .conteudo {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 12px;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+    }
+  </style>
+</head>
+
+<body class="fundo-inicial">
+  <h1 style="text-align: center;">Java</h1>
+  <div class="quadro">
+    <div class="topico" onclick="toggleTexto(this)">
+      <div class="titulo">🧾 1. Origem e Portabilidade</div>
+      <div class="conteudo">Java foi criado em 1995 pela Sun Microsystems, com a proposta de ser uma linguagem portável
+        — ou seja, um mesmo programa poderia rodar em diferentes sistemas operacionais. Isso se tornou possível graças à
+        JVM (Java Virtual Machine), que interpreta o código Java em qualquer ambiente. Essa ideia, resumida na frase
+        "Write once, run anywhere", revolucionou o mundo da programação.
+
+      </div>
+    </div>
+
+    <div class="topico" onclick="toggleTexto(this)">
+      <div class="titulo">🌍2. Onde Java é Usado</div>
+      <div class="conteudo">Java se tornou uma das linguagens mais usadas no mundo. Está presente em sistemas bancários,
+        aplicativos corporativos, aplicações web, software embarcado e também no desenvolvimento de apps Android. Sua
+        estabilidade, segurança e escalabilidade fazem dela uma escolha confiável para projetos de longo prazo e grande
+        porte, além de contar com uma enorme comunidade de desenvolvedores.</div>
+    </div>
+
+    <div class="topico" onclick="toggleTexto(this)">
+      <div class="titulo">🧱3. Orientação a Objetos</div>
+      <div class="conteudo">
+        Java é uma linguagem totalmente orientada a objetos, o que significa que os programas são
+        organizados em classes e objetos, com propriedades e comportamentos. Ela segue os pilares fundamentais da POO:
+        herança, encapsulamento, polimorfismo e abstração. Isso facilita a manutenção, reutilização e expansão dos
+        projetos, tornando o código mais organizado e poderoso.
+      </div>
+    </div> <!-- FECHAMENTO CORRETO DO TÓPICO 3 -->
+
+    <div class="topico" onclick="toggleTexto(this)">
+      <div class="titulo">🔧4. Ferramentas e Ecossistema</div>
+      <div class="conteudo">
+        O ecossistema Java é robusto. Ferramentas como NetBeans, Eclipse e IntelliJ IDEA facilitam
+        o desenvolvimento com recursos como autocompletar, depuração e gerenciamento de projetos. Além disso,
+        frameworks como Spring e Hibernate são amplamente utilizados para desenvolvimento web e acesso a bancos de
+        dados. Java continua evoluindo, mantendo-se relevante mesmo após quase 30 anos de existência.
+      </div>
+    </div>
+
+    <script src="QuadroDeTopicos.js"></script>
+  </div>
+  <a href="TelaInicial.html" class="botao-voltar">Voltar</a>
+</body>
+
+</html>

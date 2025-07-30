@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      background: #0e0e0e;
+      overflow: hidden;
+      height: 100vh;
+      color: white;
+      font-family: sans-serif;
+    }
+
+    .fundo-inicial {
+      background-image: url('imagem/FundoLogica.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .botao-voltar {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #ffffff22;
+      color: white;
+      border: 1px solid white;
+      border-radius: 8px;
+      text-decoration: none;
+      backdrop-filter: blur(5px);
+      z-index: 999;
+    }
+
+    .botao-voltar:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .quadro {
+      width: 500px;
+      margin: 50px auto;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 12px;
+      backdrop-filter: blur(5px);
+    }
+
+    .topico {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .topico:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .titulo {
+      padding: 12px;
+      font-weight: bold;
+    }
+
+    .conteudo {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 12px;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+    }
+  </style>
+</head>
+
+<body class="fundo-inicial">
+  <h1 style="text-align: center;">Lógica Computacional</h1>
+  <div class="quadro">
+    <div class="topico" onclick="toggleTexto(this)">
+      <div class="titulo">🧮 1. Fundamentos da Lógica</div>
+      <div class="conteudo">A lógica computacional é a base do pensamento algorítmico. Ela envolve o raciocínio
+        estruturado, onde o programador precisa pensar em sequências de ações, condições e repetições para que o
+        computador execute uma tarefa. Aprender lógica é como treinar o cérebro para resolver problemas usando passos
+        claros e objetivos.
+      </div>
+    </div>
+
+    <div class="topico" onclick="toggleTexto(this)">
+      <div class="titulo">📊 2. Algoritmos e Fluxogramas</div>
+      <div class="conteudo">Um algoritmo é uma sequência ordenada de passos para resolver um problema. Pode ser
+        representado por texto ou por fluxogramas, que ajudam a visualizar o processo. Criar bons algoritmos é essencial
+        para programar bem, e exige clareza, lógica e prática. É a habilidade mais importante para quem está começando.
+      </div>
+    </div>
+
+    <div class="topico" onclick="toggleTexto(this)">
+      <div class="titulo">🔁 3. Repetições e Laços</div>
+      <div class="conteudo">
+        Laços de repetição como while, for e do-while permitem que o programa execute uma mesma ação várias vezes. Eles
+        são fundamentais para automatizar tarefas, percorrer listas e controlar o fluxo do programa. Saber quando e como
+        usar cada tipo de laço é essencial para escrever algoritmos eficientes e enxutos.
+      </div>
+    </div> <!-- FECHAMENTO CORRETO DO TÓPICO 3 -->
+
+    <div class="topico" onclick="toggleTexto(this)">
+      <div class="titulo">⚖️ 4. Condições e Decisões</div>
+      <div class="conteudo">
+        As estruturas condicionais permitem que o programa tome decisões baseadas em situações. Com comandos como if,
+        else e switch, podemos criar programas que reagem a diferentes entradas e comportamentos. A lógica de decisão
+        está presente em praticamente todos os sistemas, de jogos a sistemas bancários.
+
+
+      </div>
+    </div>
+
+    <script src="QuadroDeTopicos.js"></script>
+  </div>
+  <a href="TelaInicial.html" class="botao-voltar">Voltar</a>
+  <a href="TelaInicial.html" class="botao-voltar">Voltar</a>
+</body>
+
+</html>

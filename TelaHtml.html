@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      background: #0e0e0e;
+      overflow: hidden;
+      height: 100vh;
+      color: white;
+      font-family: sans-serif;
+    }
+
+    .fundo-inicial {
+      background-image: url('imagem/FundoWeb.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .botao-voltar {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #ffffff22;
+      color: white;
+      border: 1px solid white;
+      border-radius: 8px;
+      text-decoration: none;
+      backdrop-filter: blur(5px);
+      z-index: 999;
+    }
+
+    .botao-voltar:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .quadro {
+      width: 500px;
+      margin: 50px auto;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 12px;
+      backdrop-filter: blur(5px);
+    }
+
+    .topico {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .topico:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .titulo {
+      padding: 12px;
+      font-weight: bold;
+    }
+
+    .conteudo {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 12px;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+    }
+  </style>
+</head>
+
+<body class="fundo-inicial">
+  <h1 style="text-align: center;">Desenvolvimento Web</h1>
+  <div class="quadro">
+    <div class="topico" onclick="toggleTexto(this)">
+      <div class="titulo">🌱 1. Como a Web Começou</div>
+      <div class="conteudo">O desenvolvimento web surgiu no início dos anos 90, com a criação da World Wide Web por Tim Berners-Lee. No começo, os sites eram simples e estáticos, feitos apenas com HTML. Com o tempo, surgiram o CSS, para estilizar as páginas, e o JavaScript, que permitiu tornar os sites interativos. Essa evolução transformou a internet em uma plataforma viva, cheia de possibilidades.
+      </div>
+    </div>
+  
+  <div class="topico" onclick="toggleTexto(this)">
+    <div class="titulo">🧑‍💻 2. Front-end e Back-end</div>
+    <div class="conteudo">O desenvolvimento web moderno é dividido entre front-end e back-end. O front-end é a parte
+      visual do site — aquilo que o usuário vê e interage — e envolve HTML, CSS e JavaScript. Já o back-end cuida do
+      que acontece por trás: servidores, bancos de dados e lógica de funcionamento, usando linguagens como Python,
+      PHP, Ruby ou Java. Ambos trabalham juntos para entregar experiências completas e funcionais.</div>
+  </div>
+
+  <div class="topico" onclick="toggleTexto(this)">
+    <div class="titulo">🧰 3. Ferramentas e Frameworks</div>
+    <div class="conteudo">
+      Com a web se tornando mais complexa, surgiram ferramentas que facilitam o desenvolvimento. Frameworks como
+      React, Vue.js e Angular aceleram o trabalho no front-end, enquanto Node.js, Django e Laravel são populares no
+      back-end. Além disso, sistemas de controle de versão como o Git permitem colaboração entre programadores.
+      Esses recursos tornam o desenvolvimento web mais ágil, moderno e acessível.
+    </div>
+  </div> <!-- FECHAMENTO CORRETO DO TÓPICO 3 -->
+
+  <div class="topico" onclick="toggleTexto(this)">
+    <div class="titulo">📱 4. Web Responsiva e Acessível</div>
+    <div class="conteudo">
+      Hoje, a maior parte dos acessos à internet acontece por dispositivos móveis. Por isso, é fundamental que os
+      sites sejam responsivos, ou seja, se adaptem a diferentes tamanhos de tela. Também é importante pensar na
+      acessibilidade, garantindo que pessoas com deficiências consigam navegar e interagir com o conteúdo. O
+      desenvolvimento web atual busca não só beleza e funcionalidade, mas também inclusão e eficiência.
+    </div>
+  </div>
+  </div>
+
+  <script src="QuadroDeTopicos.js"></script>
+  </div>
+  <a href="TelaInicial.html" class="botao-voltar">Voltar</a>
+</body>
+
+</html>

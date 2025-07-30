@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      background: #0e0e0e;
+      overflow: hidden;
+      height: 100vh;
+      color: white;
+      font-family: sans-serif;
+    }
+
+    .fundo-inicial {
+      background-image: url('imagem/FundoHistoria.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .botao-voltar {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #ffffff22;
+      color: white;
+      border: 1px solid white;
+      border-radius: 8px;
+      text-decoration: none;
+      backdrop-filter: blur(5px);
+      z-index: 999;
+    }
+
+    .botao-voltar:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .quadro {
+      width: 500px;
+      margin: 50px auto;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 12px;
+      backdrop-filter: blur(5px);
+    }
+
+    .topico {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .topico:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .titulo {
+      padding: 12px;
+      font-weight: bold;
+    }
+
+    .conteudo {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 12px;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+    }
+  </style>
+</head>
+
+<body class="fundo-inicial">
+  <h1 style="text-align: center;">História da Programação</h1>
+  <div class="quadro">
+    <div class="topico" onclick="toggleTexto(this)">
+      <div class="titulo"> 📜 1. A Primeira Programadora</div>
+      <div class="conteudo">A história da programação começou muito antes dos computadores modernos. No século XIX, Ada
+        Lovelace, uma matemática britânica, escreveu o que é considerado o primeiro algoritmo da história. Ela criou
+        instruções para a Máquina Analítica de Charles Babbage, um protótipo de computador mecânico que nem chegou a ser
+        concluído. Mesmo assim, Ada compreendeu que a máquina poderia ir além da matemática, lidando com símbolos e
+        lógica — uma visão que antecipou a programação moderna.
+      </div>
+    </div>
+
+    <div class="topico" onclick="toggleTexto(this)">
+      <div class="titulo">🧮2. O Nascimento das Linguagens</div>
+      <div class="conteudo">Com o avanço dos computadores no século XX, surgiu a necessidade de se comunicar com as
+        máquinas de maneira mais eficiente. Assim nasceram as primeiras linguagens de programação, como Assembly,
+        Fortran (1957) e COBOL (1959). Elas permitiram a automação de cálculos científicos e tarefas empresariais.
+        Apesar de complexas, essas linguagens abriram caminho para o desenvolvimento de softwares mais poderosos e
+        mudaram completamente o rumo da computação.</div>
+    </div>
+
+    <div class="topico" onclick="toggleTexto(this)">
+      <div class="titulo">💻 3. Da Programação Estruturada à Orientada a Objetos</div>
+      <div class="conteudo">
+        Nos anos 70 e 80, surgiram linguagens como C e Pascal, que introduziram a programação estruturada, facilitando a
+        organização do código. Pouco depois, surgiu a programação orientada a objetos, com linguagens como Smalltalk e
+        C++, que modelavam os programas com base em objetos e comportamentos. Essa mudança tornou o desenvolvimento mais
+        modular, reutilizável e próximo do mundo real.
+      </div>
+    </div>
+
+    <div class="topico" onclick="toggleTexto(this)">
+      <div class="titulo">🌐 4. Programar no Século XXI</div>
+      <div class="conteudo">
+        Hoje, a programação está presente em praticamente todas as áreas: smartphones, carros, jogos, redes sociais,
+        bancos e até geladeiras. Linguagens como Python, JavaScript e Java dominam o mercado, acompanhadas por ambientes
+        de desenvolvimento modernos, bibliotecas poderosas e frameworks que facilitam o processo. Programar se tornou
+        uma das habilidades mais importantes do mundo atual.
+      </div>
+    </div>
+
+    <script src="QuadroDeTopicos.js"></script>
+  </div>
+  <a href="TelaInicial.html" class="botao-voltar">Voltar</a>
+</body>
+
+</html>
