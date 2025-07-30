@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Site de Programação</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-y: auto;
+    
+    }
+
+    body {
+      background: #0e0e0e;
+      color: white;
+      font-family: sans-serif;
+    }
+
+    .fundo-inicial {
+      background-image: url('imagem/FundoDoMenuPrincipal.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .card {
+      position: relative;
+      height: 325px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 15px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      background-color: rgba(0, 0, 0, 0.3);
+      /* leve transparência */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card-texto {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 15px;
+      background: rgba(0, 0, 0, 0.4);
+      /* fundo escuro e transparente */
+      color: white;
+      font-size: 28px;
+      text-align: center;
+      backdrop-filter: blur(2px);
+      /* efeito de vidro */
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .icon {
+      width: 280px;
+      height: 280px;
+      object-fit: contain;
+    }
+
+    .iconPequeno {
+      width: 600px;
+      height: 600px;
+      object-fit: contain;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 48px;
+      margin-top: 20px;
+    }
+
+    hr {
+      width: 50%;
+      margin: 20px auto;
+      border: 1px solid white;
+    }
+
+    .content {
+      padding: 40px;
+    }
+  </style>
+</head>
+
+<body class="fundo-inicial">
+
+  <div class="overlay"></div>
+
+  <div class="content">
+    <h1>Programação</h1>
+    <hr>
+
+    <div class="container">
+
+      <a href="TelaHistoria.html">
+        <div class="card">
+          <img src="imagem/FotoHistoria.avif" alt="Ícone" class="icon">
+          <div class="card-texto">História</div>
+        </div>
+      </a>
+
+      <a href="TelaJava.html">
+        <div class="card">
+          <img src="imagem/FotoDoJava.webp" alt="Ícone" class="icon">
+          <div class="card-texto">Java</div>
+        </div>
+      </a>
+
+      <a href="TelaHtml.html">
+        <div class="card">
+          <img src="imagem/FotoWeb.png" alt="Ícone" class="iconPequeno">
+          <div class="card-texto">Web</div>
+        </div>
+      </a>
+
+      <a href="TelaLogica.html">
+        <div class="card">
+          <img src="imagem/FotoLogica.png" alt="Ícone" class="iconPequeno">
+          <div class="card-texto">Lógica</div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</body>
+
+</html>
